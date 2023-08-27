@@ -2,8 +2,8 @@ NAME=rush-02
 CC=cc
 FLAGS=-Werror -Wall -Wextra
 
-FILES=main.c
-HEADERS=
+FILES=main.c utils.c
+HEADERS=rush.h
 
 # Standard rule, equals "make rush-02"
 # As it is the first rule, it will be called when just typing "make" 
