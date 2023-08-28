@@ -1,10 +1,15 @@
+
 #include "rush.h"
 
 int	main(int argc, char **argv)
 {
-	dict dictReceive;
+	t_entry *dictReceive = (t_entry *)malloc(sizeof(t_entry));
+	dictReceive->num = 10;
+	dictReceive->word = "word";
 
 	fillStruct(dictReceive);
 	write(1, "Teste\n", 6);
 	return (0);
+	(void)argc;
+	(void)argv;
 }

@@ -1,14 +1,13 @@
 #include "rush.h"
 
-void fillStruct(dict dictReceive) //Utilizar esta função para guardar a informação do ficheiro numa estrutura ??? talvez dê assim
+void fillStruct(t_entry *dict) //Utilizar esta função para guardar a informação do ficheiro numa estrutura ??? talvez dê assim
 {
-    char *line;
-    char test;
-    FILE *file = fopen("numbers.dict", "r");
+    int fd = open("numbers.dict", O_RDONLY);
 
-    if (file == NULL)
+    if (fd == -1)
     {
         write(1, "The file does not exist or it's empty", 38);
         exit (0);
     }
+	(void)dict;
 }

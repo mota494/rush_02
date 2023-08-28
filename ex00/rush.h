@@ -1,18 +1,22 @@
 
 #ifndef RUSH_H
 #define RUSH_H
-#define MAX_WORD_SIZE 10 //pode ser depois alterado para utilizar memŕoia dinâmica
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
+# ifndef BUFF_SIZE
+# define BUFF_SIZE 10 // Tamanho para os buffers se não definido em compilação com a flag -d
+# endif
 
-typedef struct dict_struct  //Structure para salvar as entradas no ficheiro .dict
+# include <stdio.h>
+# include <stdlib.h>
+# include <unistd.h>
+# include <fcntl.h>
+
+typedef struct s_entry  //Structure para salvar as entradas no ficheiro .dict
 {
-    char *dictKey;
-    char dictWord[MAX_WORD_SIZE];
-}dict;
+    int num;
+    char *word;
+}	t_entry;
 
-void fillStruct(dict dictReceive);
+void fillStruct(t_entry *dict);
 
 #endif
