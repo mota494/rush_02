@@ -18,5 +18,6 @@ typedef struct s_entry  //Structure para salvar as entradas no ficheiro .dict
 }	t_entry;
 
 void fillStruct(t_entry *dict);
+int ft_atoi(char *str);
 
 #endif
