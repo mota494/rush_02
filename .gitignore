@@ -2,3 +2,4 @@
 rush-02
 *.o
 *.gch
+*.out
